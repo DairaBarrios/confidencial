@@ -1,0 +1,199 @@
+@import url("http://fonts.cdnfonts.com/css/gotham");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  line-height: 25px;
+}
+
+header > div {
+  letter-spacing: -0.35px;
+}
+
+nav {
+  border-bottom: 1px solid #dde5ed;
+  height: 34px;
+}
+nav > ul {
+  margin: auto;
+  width: fit-content;
+}
+nav > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: auto;
+  margin: 0 9px;
+}
+
+main {
+  max-width: 1280px;
+  margin: 35px auto;
+}
+section > div {
+  display: inline-block;
+  margin: 10px 20px;
+  width: auto;
+}
+section > article {
+  border-top: 1px solid #dde5ed;
+}
+section > article:first-child {
+  border-top: none;
+}
+
+.topBar {
+  height: 42px;
+  border-bottom: 1px solid #dde5ed;
+  display: flex;
+  align-items: center;
+}
+.topBar > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 21px;
+}
+
+.topBarLeft {
+  padding: 0;
+  margin-left: 85px;
+}
+
+.topBarLeft > li {
+  padding: 0 9px;
+  font: normal normal 600 18px "Work Sans", sans-serif;
+  color: #717171;
+}
+.superscript {
+  position: relative;
+  top: -0.5em;
+  font-size: 80%;
+  font: normal normal normal 10px "Work Sans", sans-serif;
+}
+
+.topBarRight {
+  padding: 0;
+  margin-right: 85px;
+}
+.topBarRight > li {
+  padding: 0 3px;
+}
+
+header > div > ul > li > a {
+  color: #717171;
+  font: normal normal 600 14px "Work Sans", sans-serif;
+}
+header > div > ul > li > p {
+  margin-right: 450px;
+  font: normal normal normal 14px "Work Sans", sans-serif;
+  color: #717171;
+}
+nav > ul > li > a {
+  font: normal normal 600 16px "Work Sans", sans-serif;
+  letter-spacing: -0.4px;
+  color: #000000;
+}
+h1 {
+  font: normal normal bold 30px "Lora", serif;
+  color: #c60c30;
+  text-align: center;
+  padding-top: 15px;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  justify-content: center;
+  display: flex;
+}
+
+article {
+  padding: 10px;
+}
+article > a {
+  color: #005077;
+  font: normal normal bold 14px Gotham;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
+section > div > h2 {
+  color: #005077;
+  font: normal normal bold 15px "Gotham", sans-serif;
+  letter-spacing: -0.35px;
+  text-transform: uppercase;
+}
+section > div > p {
+  text-align: center;
+  font: normal normal normal 16px "Work Sans", sans-serif;
+  letter-spacing: -0.4px;
+}
+.titleBold {
+  font: normal normal bold 36px "Gotham", sans-serif;
+  letter-spacing: -0.72px;
+  padding-bottom: 30px;
+}
+.df {
+  font: normal normal normal 18px "Work Sans", sans-serif;
+  letter-spacing: -0.45px;
+  padding-top: 30px;
+}
+.titleBoldTwo {
+  font: normal normal bold 24px "Gotham", sans-serif;
+  letter-spacing: -0.48px;
+}
+.ad {
+  font: normal normal normal 16px "Work Sans", sans-serif;
+  letter-spacing: -0.4px;
+}
+.columnCenter > article {
+  padding-top: 10px;
+}
+h2 {
+  font: normal normal bold 18px "Gotham", sans-serif;
+  letter-spacing: -0.36px;
+}
+.rowTop {
+  font: normal normal normal 16px "Work Sans", sans-serif;
+  letter-spacing: -0.4px;
+}
+/*GRID*/
+.columnRight {
+  grid-area: columnRight;
+  border-right: 1px solid #dde5ed;
+}
+.columnCenter {
+  grid-area: columnCenter;
+}
+.columnLeft {
+  grid-area: columnLeft;
+  border-left: 1px solid #dde5ed;
+}
+.rowTop {
+  grid-area: rowTop;
+}
+.gridContainer > * {
+  padding: 20px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "rowTop"
+    "columnRight"
+    "columnCenter"
+    "columnLeft";
+  gap: 5px;
+  padding: 0 20px;
+  margin: 10px;
+}
+
+.gridContainer {
+  grid-template:
+    "rowTop rowTop rowTop" auto
+    "columnRight columnCenter columnLeft" auto /
+    auto auto;
+}
