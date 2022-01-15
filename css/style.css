@@ -7,6 +7,10 @@
   line-height: 25px;
 }
 
+header {
+  max-width: fit-content;
+}
+
 header > div {
   letter-spacing: -0.35px;
 }
@@ -18,6 +22,8 @@ nav {
 nav > ul {
   margin: auto;
   width: fit-content;
+  padding: 0;
+  display: flex;
 }
 nav > ul > li {
   display: inline-block;
@@ -29,11 +35,9 @@ nav > ul > li {
 
 main {
   max-width: 1280px;
-  margin: 35px auto;
 }
 section > div {
-  display: inline-block;
-  margin: 10px 20px;
+  display: flex;
   width: auto;
 }
 section > article {
@@ -41,6 +45,14 @@ section > article {
 }
 section > article:first-child {
   border-top: none;
+  padding: 0;
+}
+
+section > article > div > img {
+  display: block;
+}
+section > article > a {
+  padding-bottom: 11px;
 }
 
 .topBar {
@@ -110,9 +122,27 @@ h1 {
   justify-content: center;
   display: flex;
 }
+.destacados {
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+.destacados > h2 > span {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: #c60c30;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.destacados > p {
+  margin-left: 6px;
+}
 
 article {
-  padding: 10px;
+  padding-top: 22px;
+  padding-bottom: 15px;
 }
 article > a {
   color: #005077;
@@ -132,15 +162,17 @@ section > div > p {
   letter-spacing: -0.4px;
 }
 .titleBold {
-  font: normal normal bold 36px "Gotham", sans-serif;
+  font: normal normal bold 34px "Gotham", sans-serif;
   letter-spacing: -0.72px;
-  padding-bottom: 30px;
+  padding-bottom: 52px;
 }
 .df {
   font: normal normal normal 18px "Work Sans", sans-serif;
   letter-spacing: -0.45px;
-  padding-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
+
 .titleBoldTwo {
   font: normal normal bold 24px "Gotham", sans-serif;
   letter-spacing: -0.48px;
@@ -148,9 +180,6 @@ section > div > p {
 .ad {
   font: normal normal normal 16px "Work Sans", sans-serif;
   letter-spacing: -0.4px;
-}
-.columnCenter > article {
-  padding-top: 10px;
 }
 h2 {
   font: normal normal bold 18px "Gotham", sans-serif;
@@ -161,39 +190,45 @@ h2 {
   letter-spacing: -0.4px;
 }
 /*GRID*/
-.columnRight {
-  grid-area: columnRight;
+.columnLeft {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-right: 15px;
+}
+
+.columnCenter {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-left: 1px solid #dde5ed;
   border-right: 1px solid #dde5ed;
 }
-.columnCenter {
-  grid-area: columnCenter;
-}
-.columnLeft {
-  grid-area: columnLeft;
-  border-left: 1px solid #dde5ed;
-}
-.rowTop {
-  grid-area: rowTop;
-}
-.gridContainer > * {
-  padding: 20px;
+.columnRight {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  padding-left: 15px;
 }
 
 .gridContainer {
   display: grid;
-  grid-template-areas:
-    "rowTop"
-    "columnRight"
-    "columnCenter"
-    "columnLeft";
-  gap: 5px;
-  padding: 0 20px;
-  margin: 10px;
+  padding: 0 85px;
+}
+.twoColumns {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 160px 270px;
 }
 
-.gridContainer {
-  grid-template:
-    "rowTop rowTop rowTop" auto
-    "columnRight columnCenter columnLeft" auto /
-    auto auto;
+.twoColumns > div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.twoColumns > h2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.twoColumns > h2:first-line {
+  line-height: 0.8em !important;
 }
