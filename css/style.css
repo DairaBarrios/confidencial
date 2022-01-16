@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("http://fonts.cdnfonts.com/css/gotham");
 
 /* TIPOGRAFIA */
@@ -80,6 +87,7 @@ h2 {
 
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -100,8 +108,12 @@ nav {
 }
 nav > ul {
   margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 nav > ul > li {
@@ -116,12 +128,20 @@ main {
   max-width: 1280px;
 }
 .logo {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .summary {
   height: 70px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .summary > h2 > span {
@@ -137,6 +157,8 @@ article {
   padding-bottom: 15px;
 }
 section > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: auto;
 }
@@ -158,12 +180,21 @@ section > article > a {
 .topBar {
   height: 42px;
   border-bottom: 1px solid #dde5ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .topBar > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   height: 21px;
 }
@@ -184,13 +215,17 @@ section > article > a {
 }
 /*GRID*/
 .columnLeft {
+  -ms-grid-column: 1;
   grid-column-start: 1;
+  -ms-grid-column-span: 1;
   grid-column-end: 2;
   padding-right: 15px;
 }
 
 .columnCenter {
+  -ms-grid-column: 2;
   grid-column-start: 2;
+  -ms-grid-column-span: 1;
   grid-column-end: 3;
   padding-left: 15px;
   padding-right: 15px;
@@ -213,28 +248,37 @@ section > article > a {
   letter-spacing: 0px;
 }
 .columnRight {
+  -ms-grid-column: 3;
   grid-column-start: 3;
+  -ms-grid-column-span: 1;
   grid-column-end: 4;
   padding-left: 15px;
 }
 
 .gridContainer {
+  display: -ms-grid;
   display: grid;
   padding: 0 85px;
 }
 .twoColumns {
+  display: -ms-grid;
   display: grid;
   gap: 15px;
+  -ms-grid-columns: 160px 15px 270px;
   grid-template-columns: 160px 270px;
   padding-top: 15px;
 }
 
 .twoColumns > div {
+  -ms-grid-column: 1;
   grid-column-start: 1;
+  -ms-grid-column-span: 1;
   grid-column-end: 2;
 }
 .twoColumns > h2 {
+  -ms-grid-column: 2;
   grid-column-start: 2;
+  -ms-grid-column-span: 1;
   grid-column-end: 3;
   display: inline-block;
 }
